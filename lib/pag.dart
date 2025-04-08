@@ -1,8 +1,2 @@
-
-import 'pag_platform_interface.dart';
-
-class Pag {
-  Future<String?> getPlatformVersion() {
-    return PagPlatform.instance.getPlatformVersion();
-  }
-}
+export 'src/pag_view.dart';
+export 'src/pag_controller.dart';
