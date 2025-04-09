@@ -1,0 +1,31 @@
+PODS:
+  - FlutterMacOS (1.0.0)
+  - libpag-macOS (4.4.26)
+  - pag_darwin (0.0.1):
+    - Flutter
+    - FlutterMacOS
+    - libpag (~> 4.4.26)
+    - libpag-macOS (~> 4.4.26)
+
+DEPENDENCIES:
+  - FlutterMacOS (from `Flutter/ephemeral`)
+  - pag_darwin (from `Flutter/ephemeral/.symlinks/plugins/pag_darwin/darwin`)
+
+SPEC REPOS:
+  trunk:
+    - libpag-macOS
+
+EXTERNAL SOURCES:
+  FlutterMacOS:
+    :path: Flutter/ephemeral
+  pag_darwin:
+    :path: Flutter/ephemeral/.symlinks/plugins/pag_darwin/darwin
+
+SPEC CHECKSUMS:
+  FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
+  libpag-macOS: 133c379e4d2a9d5e0132b89f8d7de25d081968fb
+  pag_darwin: d2ba780603e3c8d2889d3a9a6bdd59f43c778b53
+
+PODFILE CHECKSUM: 7eb978b976557c8c1cd717d8185ec483fd090a82
+
+COCOAPODS: 1.15.2
