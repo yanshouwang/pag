@@ -1,5 +1,5 @@
 name: pag_darwin
-description: "A new Flutter plugin project."
+description: "iOS and macOS implementation of the pag_flutter plugin."
 version: 0.0.1-dev.0
 repository: "https://github.com/yanshouwang/pag"
 issue_tracker: "https://github.com/yanshouwang/pag/issues"
