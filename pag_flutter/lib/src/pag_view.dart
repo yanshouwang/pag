@@ -1,8 +1,11 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pag_flutter/src/pag_composition.dart';
 import 'package:pag_platform_interface/pag_platform_interface.dart' as i;
 
 import 'pag_controller.dart';
+import 'pag_file.dart';
+import 'pag_scale_mode.dart';
 
 const _kRepeatCount = 1;
 const _kScaleMode = i.PAGScaleMode.stretch;
@@ -10,9 +13,9 @@ const _kProgress = 0.0;
 
 class PAGView extends StatefulWidget {
   final PAGController controller;
-  final i.PAGFile file;
+  final PAGFile file;
   final int repeatCount;
-  final i.PAGScaleMode scaleMode;
+  final PAGScaleMode scaleMode;
   final double progress;
 
   PAGView.asset(
@@ -22,7 +25,7 @@ class PAGView extends StatefulWidget {
     this.scaleMode = _kScaleMode,
     this.progress = _kProgress,
     super.key,
-  }) : file = i.PAGFile.asset(asset);
+  }) : file = PAGFile.asset(asset);
 
   PAGView.file(
     String file, {
@@ -31,7 +34,7 @@ class PAGView extends StatefulWidget {
     this.scaleMode = _kScaleMode,
     this.progress = _kProgress,
     super.key,
-  }) : file = i.PAGFile.file(file);
+  }) : file = PAGFile.file(file);
 
   PAGView.memory(
     Uint8List memory, {
@@ -40,20 +43,20 @@ class PAGView extends StatefulWidget {
     this.scaleMode = _kScaleMode,
     this.progress = _kProgress,
     super.key,
-  }) : file = i.PAGFile.memory(memory);
+  }) : file = PAGFile.memory(memory);
 
   @override
   State<PAGView> createState() => _PAGViewState();
 }
 
 class _PAGViewState extends State<PAGView> {
-  i.PAGView get view => widget.controller.view;
+  i.PAGView get api => widget.controller.api;
 
   @override
   void initState() {
     super.initState();
-    view
-      ..setCompositon(widget.file)
+    api
+      ..setCompositon(widget.file.api)
       ..setRepeatCount(widget.repeatCount)
       ..setScaleMode(widget.scaleMode)
       ..setProgress(widget.progress);
@@ -61,23 +64,23 @@ class _PAGViewState extends State<PAGView> {
 
   @override
   Widget build(BuildContext context) {
-    return view.build(context);
+    return api.build(context);
   }
 
   @override
   void didUpdateWidget(covariant PAGView oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.file != oldWidget.file) {
-      view.setCompositon(widget.file);
+      api.setCompositon(widget.file.api);
     }
     if (widget.repeatCount != oldWidget.repeatCount) {
-      view.setRepeatCount(widget.repeatCount);
+      api.setRepeatCount(widget.repeatCount);
     }
     if (widget.scaleMode != oldWidget.scaleMode) {
-      view.setScaleMode(widget.scaleMode);
+      api.setScaleMode(widget.scaleMode);
     }
     if (widget.progress != oldWidget.progress) {
-      view.setProgress(widget.progress);
+      api.setProgress(widget.progress);
     }
   }
 }

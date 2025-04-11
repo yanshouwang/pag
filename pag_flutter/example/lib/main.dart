@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import 'package:pag_flutter/pag_flutter.dart';
@@ -20,6 +22,10 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     controller = PAGController()..play();
+
+    Timer.periodic(Durations.extralong4, (_) {
+      setState(() {});
+    });
   }
 
   @override

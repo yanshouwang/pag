@@ -12,34 +12,34 @@ abstract base class PAGController extends ChangeNotifier {
 }
 
 final class PAGControllerImpl extends PAGController {
-  final i.PAGView view;
+  final i.PAGView api;
 
   PAGControllerImpl()
-      : view = i.PAGView(),
+      : api = i.PAGView(),
         super.impl();
 
   @override
   Future<void> play() async {
-    await view.play();
+    await api.play();
   }
 
   @override
   Future<void> pause() async {
-    await view.pause();
+    await api.pause();
   }
 
   @override
   Future<void> stop() async {
-    await view.stop();
+    await api.stop();
   }
 }
 
-extension PagControllerX on PAGController {
-  i.PAGView get view {
+extension PAGControllerX on PAGController {
+  i.PAGView get api {
     final controller = this;
     if (controller is! PAGControllerImpl) {
       throw TypeError();
     }
-    return controller.view;
+    return controller.api;
   }
 }
