@@ -1,15 +1,23 @@
 # pag_flutter
 
-A new Flutter plugin project.
+A Flutter plugin for PAG(Portable Animated Graphics) files that renders After Effects animations natively across multiple platforms.
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/to/develop-plugins),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Add `pag_flutter` as a dependency in your pubspec.yaml file.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+``` shell
+flutter pub add pag_flutter
+```
 
+### PAGController
+
+* PAGController.play()
+* PAGController.pause()
+* PAGController.stop()
+
+### PAGView
+
+* PAGView.asset()
+* PAGView.file()
+* PAGView.memory()
