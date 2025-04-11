@@ -1,6 +1,6 @@
 name: pag_platform_interface
 description: "A common platform interface for the pag_flutter plugin."
-version: 0.0.1-dev.0
+version: 0.0.1
 repository: "https://github.com/yanshouwang/pag"
 issue_tracker: "https://github.com/yanshouwang/pag/issues"
 topics:
