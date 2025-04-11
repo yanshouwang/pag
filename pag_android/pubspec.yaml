@@ -1,0 +1,33 @@
+name: pag_android
+description: "Android implementation of the pag_flutter plugin."
+version: 0.0.1
+repository: "https://github.com/yanshouwang/pag"
+issue_tracker: "https://github.com/yanshouwang/pag/issues"
+topics:
+  - libpag
+  - pag
+
+environment:
+  sdk: ^3.6.0
+  flutter: ">=3.3.0"
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pag_platform_interface: ^0.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  pigeon: ^25.3.0
+
+flutter:
+  plugin:
+    implements: pag_flutter
+    platforms:
+      android:
+        package: dev.hebei.pag_android
+        pluginClass: PAGAndroidPlugin
+        dartPluginClass: PAGAndroidPlugin

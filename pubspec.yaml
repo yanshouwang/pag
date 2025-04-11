@@ -1,0 +1,10 @@
+name: _
+publish_to: none
+environment:
+  sdk: ^3.6.0
+workspace:
+  - pag_platform_interface
+  - pag_android
+  - pag_darwin
+  - pag_flutter
+  - pag_flutter/example

@@ -1,0 +1,37 @@
+PODS:
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - libpag (4.4.26)
+  - pag_darwin (0.0.1):
+    - Flutter
+    - FlutterMacOS
+    - libpag (~> 4.4.26)
+    - libpag-macOS (~> 4.4.26)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - pag_darwin (from `.symlinks/plugins/pag_darwin/darwin`)
+
+SPEC REPOS:
+  trunk:
+    - libpag
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  pag_darwin:
+    :path: ".symlinks/plugins/pag_darwin/darwin"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  integration_test: 252f60fa39af5e17c3aa9899d35d908a0721b573
+  libpag: 14261eb46916b1ac6bdb013c8da303c5db835e85
+  pag_darwin: d2ba780603e3c8d2889d3a9a6bdd59f43c778b53
+
+PODFILE CHECKSUM: 4305caec6b40dde0ae97be1573c53de1882a07e5
+
+COCOAPODS: 1.15.2

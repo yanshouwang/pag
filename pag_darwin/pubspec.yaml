@@ -1,0 +1,39 @@
+name: pag_darwin
+description: "iOS and macOS implementation of the pag_flutter plugin."
+version: 0.0.1
+repository: "https://github.com/yanshouwang/pag"
+issue_tracker: "https://github.com/yanshouwang/pag/issues"
+topics:
+  - libpag
+  - pag
+
+environment:
+  sdk: ^3.6.0
+  # Flutter versions prior to 3.7 did not support the
+  # sharedDarwinSource option.
+  flutter: ">=3.7.0"
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pag_platform_interface: ^0.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  pigeon: ^25.3.0
+
+flutter:
+  plugin:
+    implements: pag_flutter
+    platforms:
+      ios:
+        sharedDarwinSource: true
+        pluginClass: PAGDarwinPlugin
+        dartPluginClass: PAGiOSPlugin
+      macos:
+        sharedDarwinSource: true
+        pluginClass: PAGDarwinPlugin
+        dartPluginClass: PAGmacOSPlugin

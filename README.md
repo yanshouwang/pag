@@ -1,2 +1,1 @@
-# pag
-A PAG plugin for flutter.
+# PAG
