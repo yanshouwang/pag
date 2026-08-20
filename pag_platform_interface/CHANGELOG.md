@@ -1,6 +1,6 @@
 ## 0.0.2
 
-* Upgrade dependencies.
+* Bump version
 
 ## 0.0.1
 
