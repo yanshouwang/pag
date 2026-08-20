@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "pag-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/libpag/pag-ios.git",
+      "state" : {
+        "revision" : "4f833aefcd58a4df8a9659ce6ebfd93ca86bf371",
+        "version" : "4.5.92"
+      }
+    },
+    {
+      "identity" : "pag-macos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yanshouwang/pag-macos.git",
+      "state" : {
+        "revision" : "7eca323501fb9ca0d3b84dd3a8616df6a3748a3c",
+        "version" : "4.5.85"
+      }
+    }
+  ],
+  "version" : 2
+}

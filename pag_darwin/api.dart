@@ -6,7 +6,7 @@ import 'package:pigeon/pigeon.dart';
   PigeonOptions(
     dartOut: 'lib/src/api.g.dart',
     dartOptions: DartOptions(),
-    swiftOut: 'darwin/Classes/PAGApi.g.swift',
+    swiftOut: 'darwin/pag_darwin/Sources/pag_darwin/PAGApi.g.swift',
     swiftOptions: SwiftOptions(
       errorClassName: 'PAGError',
     ),
