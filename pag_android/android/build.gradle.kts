@@ -80,7 +80,7 @@ project.extensions.configure(org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjec
 }
 
 dependencies {
-    implementation("com.tencent.tav:libpag:4.4.26")
+    implementation("com.tencent.tav:libpag:4.5.85")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.mockito:mockito-core:5.0.0")
 }
