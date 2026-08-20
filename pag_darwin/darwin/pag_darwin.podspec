@@ -27,7 +27,7 @@ A new Flutter plugin project.
   
   s.ios.deployment_target = '13.0'
   s.ios.dependency 'Flutter'
-  s.ios.dependency 'libpag', '~>4.5.92'
+  s.ios.dependency 'libpag', '~>4.5.85'
 
   s.osx.deployment_target = '10.15'
   s.osx.dependency 'FlutterMacOS'

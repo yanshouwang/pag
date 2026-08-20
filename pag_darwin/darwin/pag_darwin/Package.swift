@@ -17,7 +17,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "FlutterFramework", path: "../FlutterFramework"),
-        .package(url: "https://github.com/libpag/pag-ios.git", from: "4.5.92"),
+        .package(url: "https://github.com/libpag/pag-ios.git", from: "4.5.85"),
         .package(url: "https://github.com/yanshouwang/pag-macos.git", from: "4.5.85")
     ],
     targets: [
