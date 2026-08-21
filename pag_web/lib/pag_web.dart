@@ -1,8 +1,1 @@
-
-import 'pag_web_platform_interface.dart';
-
-class PagWeb {
-  Future<String?> getPlatformVersion() {
-    return PagWebPlatform.instance.getPlatformVersion();
-  }
-}
+export 'src/pag_web_plugin.dart';

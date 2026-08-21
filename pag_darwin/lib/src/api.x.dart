@@ -2,7 +2,6 @@ import 'package:pag_platform_interface/pag_platform_interface.dart';
 
 import 'api.g.dart';
 import 'pag_file_impl.dart';
-import 'pag_view_impl.dart';
 
 extension PAGScaleModeX on PAGScaleMode {
   PAGScaleModeApi get api => PAGScaleModeApi.values[index];
@@ -10,16 +9,6 @@ extension PAGScaleModeX on PAGScaleMode {
 
 extension PAGScaleModeApiX on PAGScaleModeApi {
   PAGScaleMode get impl => PAGScaleMode.values[index];
-}
-
-extension PAGViewX on PAGView {
-  PAGViewApi get api {
-    final controller = this;
-    if (controller is! PAGViewImpl) {
-      throw TypeError();
-    }
-    return controller.api;
-  }
 }
 
 extension PAGCompositionX on PAGComposition {

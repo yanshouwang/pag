@@ -6,5 +6,6 @@ workspace:
   - pag_platform_interface
   - pag_android
   - pag_darwin
+  - pag_web
   - pag_flutter
   - pag_flutter/example
