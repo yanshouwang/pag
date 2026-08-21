@@ -1,1 +1,1 @@
-rootProject.name = 'pag_android'
+rootProject.name = "pag_android"

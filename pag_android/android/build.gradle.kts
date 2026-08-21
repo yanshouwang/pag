@@ -1,4 +1,4 @@
-group = "dev.hebei.pag_android"
+group = "dev.zeekr.pag_android"
 version = "1.0-SNAPSHOT"
 
 buildscript {
@@ -25,14 +25,8 @@ plugins {
     id("com.android.library")
 }
 
-val agpMajor = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.substringBefore('.').toInt()
-
-if (agpMajor < 9) {
-    apply(plugin = "org.jetbrains.kotlin.android")
-}
-
 android {
-    namespace = "dev.hebei.pag_android"
+    namespace = "dev.zeekr.pag_android"
 
     compileSdk = 36
 
@@ -73,7 +67,7 @@ android {
     }
 }
 
-project.extensions.configure(org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension::class.java) {
+kotlin {
     compilerOptions {
         jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
     }

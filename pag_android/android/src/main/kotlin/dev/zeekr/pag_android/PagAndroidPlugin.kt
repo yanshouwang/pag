@@ -1,4 +1,4 @@
-package dev.hebei.pag_android
+package dev.zeekr.pag_android
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 
@@ -10,7 +10,7 @@ class PAGAndroidPlugin : FlutterPlugin {
         impl = PAGImpl(binding.binaryMessenger, binding.applicationContext, binding.flutterAssets)
         impl.setUp()
         val viewFactory = PAGViewFactory(impl.instanceManager)
-        binding.platformViewRegistry.registerViewFactory("hebei.dev/PAGView", viewFactory)
+        binding.platformViewRegistry.registerViewFactory("zeekr.dev/PAGView", viewFactory)
     }
 
     override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {

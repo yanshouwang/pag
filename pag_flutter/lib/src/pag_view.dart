@@ -36,14 +36,14 @@ class PAGView extends StatefulWidget {
     super.key,
   }) : file = PAGFile.file(file);
 
-  PAGView.memory(
-    Uint8List memory, {
+  PAGView.bytes(
+    Uint8List bytes, {
     required this.controller,
     this.repeatCount = _kRepeatCount,
     this.scaleMode = _kScaleMode,
     this.progress = _kProgress,
     super.key,
-  }) : file = PAGFile.memory(memory);
+  }) : file = PAGFile.bytes(bytes);
 
   @override
   State<PAGView> createState() => _PAGViewState();

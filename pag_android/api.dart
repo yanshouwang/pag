@@ -6,17 +6,15 @@ import 'package:pigeon/pigeon.dart';
   PigeonOptions(
     dartOut: 'lib/src/api.g.dart',
     dartOptions: DartOptions(),
-    kotlinOut: 'android/src/main/kotlin/dev/hebei/pag_android/PAGApi.g.kt',
+    kotlinOut: 'android/src/main/kotlin/dev/zeekr/pag_android/PAGApi.g.kt',
     kotlinOptions: KotlinOptions(
-      package: 'dev.hebei.pag_android',
+      package: 'dev.zeekr.pag_android',
       errorClassName: 'PAGError',
     ),
   ),
 )
 @ProxyApi(
-  kotlinOptions: KotlinProxyApiOptions(
-    fullClassName: 'org.libpag.PAGView',
-  ),
+  kotlinOptions: KotlinProxyApiOptions(fullClassName: 'org.libpag.PAGView'),
 )
 abstract class PAGViewApi {
   PAGViewApi();
@@ -50,19 +48,12 @@ abstract class PAGCompositionApi {
 }
 
 @ProxyApi(
-  kotlinOptions: KotlinProxyApiOptions(
-    fullClassName: 'org.libpag.PAGFile',
-  ),
+  kotlinOptions: KotlinProxyApiOptions(fullClassName: 'org.libpag.PAGFile'),
 )
 abstract class PAGFileApi extends PAGCompositionApi {
   PAGFileApi.asset(String asset);
   PAGFileApi.file(String file);
-  PAGFileApi.memory(Uint8List memory);
+  PAGFileApi.bytes(Uint8List bytes);
 }
 
-enum PAGScaleModeApi {
-  none,
-  stretch,
-  letterBox,
-  zoom,
-}
+enum PAGScaleModeApi { none, stretch, letterBox, zoom }

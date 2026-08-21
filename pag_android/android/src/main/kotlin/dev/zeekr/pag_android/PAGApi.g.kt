@@ -2,7 +2,7 @@
 // See also: https://pub.dev/packages/pigeon
 @file:Suppress("UNCHECKED_CAST", "ArrayInDataClass")
 
-package dev.hebei.pag_android
+package dev.zeekr.pag_android
 
 import android.util.Log
 import io.flutter.plugin.common.BasicMessageChannel
@@ -857,7 +857,7 @@ abstract class PigeonApiPAGFileApi(open val pigeonRegistrar: PAGApiPigeonProxyAp
 
   abstract fun file(file: String): org.libpag.PAGFile
 
-  abstract fun memory(memory: ByteArray): org.libpag.PAGFile
+  abstract fun bytes(bytes: ByteArray): org.libpag.PAGFile
 
   companion object {
     @Suppress("LocalVariableName")
@@ -902,14 +902,14 @@ abstract class PigeonApiPAGFileApi(open val pigeonRegistrar: PAGApiPigeonProxyAp
         }
       }
       run {
-        val channel = BasicMessageChannel<Any?>(binaryMessenger, "dev.flutter.pigeon.pag_android.PAGFileApi.memory", codec)
+        val channel = BasicMessageChannel<Any?>(binaryMessenger, "dev.flutter.pigeon.pag_android.PAGFileApi.bytes", codec)
         if (api != null) {
           channel.setMessageHandler { message, reply ->
             val args = message as List<Any?>
             val pigeon_identifierArg = args[0] as Long
-            val memoryArg = args[1] as ByteArray
+            val bytesArg = args[1] as ByteArray
             val wrapped: List<Any?> = try {
-              api.pigeonRegistrar.instanceManager.addDartCreatedInstance(api.memory(memoryArg), pigeon_identifierArg)
+              api.pigeonRegistrar.instanceManager.addDartCreatedInstance(api.bytes(bytesArg), pigeon_identifierArg)
               listOf(null)
             } catch (exception: Throwable) {
               PAGApiPigeonUtils.wrapError(exception)

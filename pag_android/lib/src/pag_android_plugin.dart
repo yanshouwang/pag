@@ -21,8 +21,8 @@ final class PAGAndroidPlugin extends PAGPlugin {
   }
 
   @override
-  PAGFile newPAGMemory(Uint8List memory) {
-    return PAGFileImpl.memory(memory);
+  PAGFile newPAGBytes(Uint8List bytes) {
+    return PAGFileImpl.bytes(bytes);
   }
 
   @override

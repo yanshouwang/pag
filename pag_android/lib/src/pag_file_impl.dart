@@ -12,14 +12,14 @@ final class PAGFileImpl extends PAGFile with PAGCompositionImpl {
   PAGFileImpl(this.api) : super.impl();
 
   PAGFileImpl.asset(String asset)
-      : api = PAGFileApi.asset(asset: asset),
-        super.impl();
+    : api = PAGFileApi.asset(asset: asset),
+      super.impl();
 
   PAGFileImpl.file(String file)
-      : api = PAGFileApi.file(file: file),
-        super.impl();
+    : api = PAGFileApi.file(file: file),
+      super.impl();
 
-  PAGFileImpl.memory(Uint8List memory)
-      : api = PAGFileApi.memory(memory: memory),
-        super.impl();
+  PAGFileImpl.bytes(Uint8List bytes)
+    : api = PAGFileApi.bytes(bytes: bytes),
+      super.impl();
 }

@@ -1,9 +1,9 @@
-package dev.hebei.pag_android
+package dev.zeekr.pag_android
 
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
-import kotlin.test.Test
 import org.mockito.Mockito
+import kotlin.test.Test
 
 /*
  * This demonstrates a simple unit test of the Kotlin portion of this plugin's implementation.
@@ -14,14 +14,14 @@ import org.mockito.Mockito
  */
 
 internal class PagAndroidPluginTest {
-  @Test
-  fun onMethodCall_getPlatformVersion_returnsExpectedValue() {
-    val plugin = PagAndroidPlugin()
+    @Test
+    fun onMethodCall_getPlatformVersion_returnsExpectedValue() {
+        val plugin = PagAndroidPlugin()
 
-    val call = MethodCall("getPlatformVersion", null)
-    val mockResult: MethodChannel.Result = Mockito.mock(MethodChannel.Result::class.java)
-    plugin.onMethodCall(call, mockResult)
+        val call = MethodCall("getPlatformVersion", null)
+        val mockResult: MethodChannel.Result = Mockito.mock(MethodChannel.Result::class.java)
+        plugin.onMethodCall(call, mockResult)
 
-    Mockito.verify(mockResult).success("Android " + android.os.Build.VERSION.RELEASE)
-  }
+        Mockito.verify(mockResult).success("Android " + android.os.Build.VERSION.RELEASE)
+    }
 }

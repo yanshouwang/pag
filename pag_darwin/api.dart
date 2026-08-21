@@ -7,16 +7,11 @@ import 'package:pigeon/pigeon.dart';
     dartOut: 'lib/src/api.g.dart',
     dartOptions: DartOptions(),
     swiftOut: 'darwin/pag_darwin/Sources/pag_darwin/PAGApi.g.swift',
-    swiftOptions: SwiftOptions(
-      errorClassName: 'PAGError',
-    ),
+    swiftOptions: SwiftOptions(errorClassName: 'PAGError'),
   ),
 )
 @ProxyApi(
-  swiftOptions: SwiftProxyApiOptions(
-    name: 'PAGView',
-    import: 'libpag',
-  ),
+  swiftOptions: SwiftProxyApiOptions(name: 'PAGView', import: 'libpag'),
 )
 abstract class PAGViewApi {
   PAGViewApi();
@@ -40,10 +35,7 @@ abstract class PAGViewApi {
 }
 
 @ProxyApi(
-  swiftOptions: SwiftProxyApiOptions(
-    name: 'PAGComposition',
-    import: 'libpag',
-  ),
+  swiftOptions: SwiftProxyApiOptions(name: 'PAGComposition', import: 'libpag'),
 )
 abstract class PAGCompositionApi {
   int getWidth();
@@ -51,20 +43,12 @@ abstract class PAGCompositionApi {
 }
 
 @ProxyApi(
-  swiftOptions: SwiftProxyApiOptions(
-    name: 'PAGFile',
-    import: 'libpag',
-  ),
+  swiftOptions: SwiftProxyApiOptions(name: 'PAGFile', import: 'libpag'),
 )
 abstract class PAGFileApi extends PAGCompositionApi {
   PAGFileApi.asset(String asset);
   PAGFileApi.file(String file);
-  PAGFileApi.memory(Uint8List memory);
+  PAGFileApi.bytes(Uint8List bytes);
 }
 
-enum PAGScaleModeApi {
-  none,
-  stretch,
-  letterBox,
-  zoom,
-}
+enum PAGScaleModeApi { none, stretch, letterBox, zoom }
