@@ -1,6 +1,6 @@
 name: pag_darwin
 description: "iOS and macOS implementation of the pag_flutter plugin."
-version: 0.0.2
+version: 1.0.0
 repository: "https://github.com/yanshouwang/pag-flutter"
 issue_tracker: "https://github.com/yanshouwang/pag-flutter/issues"
 topics:
@@ -15,7 +15,7 @@ resolution: workspace
 dependencies:
   flutter:
     sdk: flutter
-  pag_platform_interface: ^0.0.2
+  pag_platform_interface: ^1.0.0
 
 dev_dependencies:
   flutter_test:
