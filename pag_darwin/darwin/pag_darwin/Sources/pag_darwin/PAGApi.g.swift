@@ -927,7 +927,7 @@ final class PigeonApiPAGCompositionApi: PigeonApiProtocolPAGCompositionApi  {
 protocol PigeonApiDelegatePAGFileApi {
   func asset(pigeonApi: PigeonApiPAGFileApi, asset: String) throws -> PAGFile
   func file(pigeonApi: PigeonApiPAGFileApi, file: String) throws -> PAGFile
-  func memory(pigeonApi: PigeonApiPAGFileApi, memory: FlutterStandardTypedData) throws -> PAGFile
+  func bytes(pigeonApi: PigeonApiPAGFileApi, bytes: FlutterStandardTypedData) throws -> PAGFile
 }
 
 protocol PigeonApiProtocolPAGFileApi {
@@ -987,15 +987,15 @@ withIdentifier: pigeonIdentifierArg)
     } else {
       fileChannel.setMessageHandler(nil)
     }
-    let memoryChannel = FlutterBasicMessageChannel(name: "dev.flutter.pigeon.pag_darwin.PAGFileApi.memory", binaryMessenger: binaryMessenger, codec: codec)
+    let bytesChannel = FlutterBasicMessageChannel(name: "dev.flutter.pigeon.pag_darwin.PAGFileApi.bytes", binaryMessenger: binaryMessenger, codec: codec)
     if let api = api {
-      memoryChannel.setMessageHandler { message, reply in
+      bytesChannel.setMessageHandler { message, reply in
         let args = message as! [Any?]
         let pigeonIdentifierArg = args[0] as! Int64
-        let memoryArg = args[1] as! FlutterStandardTypedData
+        let bytesArg = args[1] as! FlutterStandardTypedData
         do {
           api.pigeonRegistrar.instanceManager.addDartCreatedInstance(
-try api.pigeonDelegate.memory(pigeonApi: api, memory: memoryArg),
+try api.pigeonDelegate.bytes(pigeonApi: api, bytes: bytesArg),
 withIdentifier: pigeonIdentifierArg)
           reply(wrapResult(nil))
         } catch {
@@ -1003,7 +1003,7 @@ withIdentifier: pigeonIdentifierArg)
         }
       }
     } else {
-      memoryChannel.setMessageHandler(nil)
+      bytesChannel.setMessageHandler(nil)
     }
   }
 

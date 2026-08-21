@@ -20,4 +20,4 @@ flutter pub add pag_flutter
 
 * PAGView.asset()
 * PAGView.file()
-* PAGView.memory()
+* PAGView.bytes()

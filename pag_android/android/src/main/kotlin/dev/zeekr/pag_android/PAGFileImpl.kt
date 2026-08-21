@@ -5,7 +5,9 @@ import io.flutter.embedding.engine.plugins.FlutterPlugin.FlutterAssets
 import org.libpag.PAGFile
 
 class PAGFileImpl(
-    registrar: PAGApiPigeonProxyApiRegistrar, private val context: Context, private val assets: FlutterAssets
+    registrar: PAGApiPigeonProxyApiRegistrar,
+    private val context: Context,
+    private val assets: FlutterAssets
 ) : PigeonApiPAGFileApi(registrar) {
     override fun asset(asset: String): PAGFile {
         val manager = context.assets
@@ -17,7 +19,7 @@ class PAGFileImpl(
         return PAGFile.Load(file)
     }
 
-    override fun memory(memory: ByteArray): PAGFile {
-        return PAGFile.Load(memory)
+    override fun bytes(bytes: ByteArray): PAGFile {
+        return PAGFile.Load(bytes)
     }
 }

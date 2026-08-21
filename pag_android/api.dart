@@ -14,9 +14,7 @@ import 'package:pigeon/pigeon.dart';
   ),
 )
 @ProxyApi(
-  kotlinOptions: KotlinProxyApiOptions(
-    fullClassName: 'org.libpag.PAGView',
-  ),
+  kotlinOptions: KotlinProxyApiOptions(fullClassName: 'org.libpag.PAGView'),
 )
 abstract class PAGViewApi {
   PAGViewApi();
@@ -50,19 +48,12 @@ abstract class PAGCompositionApi {
 }
 
 @ProxyApi(
-  kotlinOptions: KotlinProxyApiOptions(
-    fullClassName: 'org.libpag.PAGFile',
-  ),
+  kotlinOptions: KotlinProxyApiOptions(fullClassName: 'org.libpag.PAGFile'),
 )
 abstract class PAGFileApi extends PAGCompositionApi {
   PAGFileApi.asset(String asset);
   PAGFileApi.file(String file);
-  PAGFileApi.memory(Uint8List memory);
+  PAGFileApi.bytes(Uint8List bytes);
 }
 
-enum PAGScaleModeApi {
-  none,
-  stretch,
-  letterBox,
-  zoom,
-}
+enum PAGScaleModeApi { none, stretch, letterBox, zoom }
