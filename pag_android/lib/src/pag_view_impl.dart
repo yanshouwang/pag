@@ -5,7 +5,7 @@ import 'package:pag_platform_interface/pag_platform_interface.dart';
 import 'api.g.dart';
 import 'api.x.dart';
 
-const _kViewType = 'hebei.dev/PAGView';
+const _kViewType = 'zeekr.dev/PAGView';
 
 final class PAGViewImpl extends PAGView {
   PAGViewApi api;

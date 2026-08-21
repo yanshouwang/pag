@@ -2,7 +2,7 @@
 // See also: https://pub.dev/packages/pigeon
 @file:Suppress("UNCHECKED_CAST", "ArrayInDataClass")
 
-package dev.hebei.pag_android
+package dev.zeekr.pag_android
 
 import android.util.Log
 import io.flutter.plugin.common.BasicMessageChannel
