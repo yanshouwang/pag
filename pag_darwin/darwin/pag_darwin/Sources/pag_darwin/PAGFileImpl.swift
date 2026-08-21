@@ -29,8 +29,8 @@ class PAGFileImpl: PigeonApiDelegatePAGFileApi {
         return PAGFile.load(file)
     }
     
-    func memory(pigeonApi: PigeonApiPAGFileApi, memory: FlutterStandardTypedData) throws -> PAGFile {
-        let data = memory.data
+    func bytes(pigeonApi: PigeonApiPAGFileApi, bytes: FlutterStandardTypedData) throws -> PAGFile {
+        let data = bytes.data
         return try! data.withUnsafeBytes<UInt8> {
             return PAGFile.load($0.baseAddress!, size: data.count)
         }

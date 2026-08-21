@@ -7,11 +7,11 @@ import 'pag_composition.dart';
 abstract final class PAGFile extends PAGComposition {
   PAGFile.impl();
 
-  factory PAGFile.asset(String asset) = _PAGAssetImpl;
+  factory PAGFile.asset(String asset) = _AssetPAGFileImpl;
 
-  factory PAGFile.file(String file) = _PAGFileImpl;
+  factory PAGFile.file(String file) = _FilePAGFileImpl;
 
-  factory PAGFile.memory(Uint8List memory) = _PAGMemoryImpl;
+  factory PAGFile.bytes(Uint8List bytes) = _BytesPAGFileImpl;
 }
 
 base mixin PAGFileImpl on PAGFile, PAGCompositionImpl {
@@ -19,57 +19,53 @@ base mixin PAGFileImpl on PAGFile, PAGCompositionImpl {
   i.PAGFile get api;
 }
 
-final class _PAGAssetImpl extends PAGFile with PAGCompositionImpl, PAGFileImpl {
+final class _AssetPAGFileImpl extends PAGFile
+    with PAGCompositionImpl, PAGFileImpl {
   final String asset;
   @override
   final i.PAGFile api;
 
-  _PAGAssetImpl(this.asset)
-      : api = i.PAGFile.asset(asset),
-        super.impl();
+  _AssetPAGFileImpl(this.asset) : api = i.PAGFile.asset(asset), super.impl();
 
   @override
   int get hashCode => asset.hashCode;
 
   @override
   bool operator ==(Object other) {
-    return other is _PAGAssetImpl && other.asset == asset;
+    return other is _AssetPAGFileImpl && other.asset == asset;
   }
 }
 
-final class _PAGFileImpl extends PAGFile with PAGCompositionImpl, PAGFileImpl {
+final class _FilePAGFileImpl extends PAGFile
+    with PAGCompositionImpl, PAGFileImpl {
   final String file;
   @override
   final i.PAGFile api;
 
-  _PAGFileImpl(this.file)
-      : api = i.PAGFile.file(file),
-        super.impl();
+  _FilePAGFileImpl(this.file) : api = i.PAGFile.file(file), super.impl();
 
   @override
   int get hashCode => file.hashCode;
 
   @override
   bool operator ==(Object other) {
-    return other is _PAGFileImpl && other.file == file;
+    return other is _FilePAGFileImpl && other.file == file;
   }
 }
 
-final class _PAGMemoryImpl extends PAGFile
+final class _BytesPAGFileImpl extends PAGFile
     with PAGCompositionImpl, PAGFileImpl {
-  final Uint8List memory;
+  final Uint8List bytes;
   @override
   final i.PAGFile api;
 
-  _PAGMemoryImpl(this.memory)
-      : api = i.PAGFile.memory(memory),
-        super.impl();
+  _BytesPAGFileImpl(this.bytes) : api = i.PAGFile.bytes(bytes), super.impl();
 
   @override
-  int get hashCode => memory.hashCode;
+  int get hashCode => bytes.hashCode;
 
   @override
   bool operator ==(Object other) {
-    return other is _PAGMemoryImpl && other.memory == memory;
+    return other is _BytesPAGFileImpl && other.bytes == bytes;
   }
 }

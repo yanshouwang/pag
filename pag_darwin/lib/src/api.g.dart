@@ -1125,10 +1125,10 @@ class PAGFileApi extends PAGCompositionApi {
     }();
   }
 
-  PAGFileApi.memory({
+  PAGFileApi.bytes({
     super.pigeon_binaryMessenger,
     super.pigeon_instanceManager,
-    required Uint8List memory,
+    required Uint8List bytes,
   }) : super.pigeon_detached() {
     final int pigeonVar_instanceIdentifier =
         pigeon_instanceManager.addDartCreatedInstance(this);
@@ -1136,7 +1136,7 @@ class PAGFileApi extends PAGCompositionApi {
         _pigeonVar_codecPAGFileApi;
     final BinaryMessenger? pigeonVar_binaryMessenger = pigeon_binaryMessenger;
     const String pigeonVar_channelName =
-        'dev.flutter.pigeon.pag_darwin.PAGFileApi.memory';
+        'dev.flutter.pigeon.pag_darwin.PAGFileApi.bytes';
     final BasicMessageChannel<Object?> pigeonVar_channel =
         BasicMessageChannel<Object?>(
       pigeonVar_channelName,
@@ -1144,7 +1144,7 @@ class PAGFileApi extends PAGCompositionApi {
       binaryMessenger: pigeonVar_binaryMessenger,
     );
     final Future<Object?> pigeonVar_sendFuture =
-        pigeonVar_channel.send(<Object?>[pigeonVar_instanceIdentifier, memory]);
+        pigeonVar_channel.send(<Object?>[pigeonVar_instanceIdentifier, bytes]);
     () async {
       final List<Object?>? pigeonVar_replyList =
           await pigeonVar_sendFuture as List<Object?>?;

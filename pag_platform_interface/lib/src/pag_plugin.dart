@@ -18,7 +18,8 @@ abstract base class PAGPlugin extends PlatformInterface {
     final instance = _instance;
     if (instance == null) {
       throw UnimplementedError(
-          'PAGPlugin is not implemented on this platform.');
+        'PAGPlugin is not implemented on this platform.',
+      );
     }
     return instance;
   }
@@ -33,6 +34,6 @@ abstract base class PAGPlugin extends PlatformInterface {
 
   PAGFile newPAGAsset(String asset);
   PAGFile newPAGFile(String file);
-  PAGFile newPAGMemory(Uint8List memory);
+  PAGFile newPAGBytes(Uint8List bytes);
   PAGView newPAGView();
 }

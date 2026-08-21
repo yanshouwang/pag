@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/libpag/pag-ios.git",
       "state" : {
-        "revision" : "4f833aefcd58a4df8a9659ce6ebfd93ca86bf371",
-        "version" : "4.5.92"
+        "revision" : "668cf302207b518ec146f83c0b34e875d2ff0f28",
+        "version" : "4.5.85"
       }
     },
     {
