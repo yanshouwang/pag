@@ -1,4 +1,4 @@
-package dev.hebei.pag_flutter_example
+package dev.zeekr.pag_flutter_example
 
 import io.flutter.embedding.android.FlutterActivity
 

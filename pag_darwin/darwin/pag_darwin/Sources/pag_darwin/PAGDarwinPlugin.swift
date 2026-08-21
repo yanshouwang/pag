@@ -22,7 +22,7 @@ public class PAGDarwinPlugin: NSObject, FlutterPlugin {
 #endif
         let instance = PAGDarwinPlugin(messenger: messenger)
         let viewFactory = PAGViewFactory(instanceManager: instance.impl!.instanceManager)
-        registrar.register(viewFactory, withId: "hebei.dev/PAGView")
+        registrar.register(viewFactory, withId: "zeekr.dev/PAGView")
         registrar.publish(instance)
     }
     

@@ -6,9 +6,9 @@ import 'package:pigeon/pigeon.dart';
   PigeonOptions(
     dartOut: 'lib/src/api.g.dart',
     dartOptions: DartOptions(),
-    kotlinOut: 'android/src/main/kotlin/dev/hebei/pag_android/PAGApi.g.kt',
+    kotlinOut: 'android/src/main/kotlin/dev/zeekr/pag_android/PAGApi.g.kt',
     kotlinOptions: KotlinOptions(
-      package: 'dev.hebei.pag_android',
+      package: 'dev.zeekr.pag_android',
       errorClassName: 'PAGError',
     ),
   ),

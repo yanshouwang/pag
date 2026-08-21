@@ -8,7 +8,7 @@
 PRODUCT_NAME = pag_flutter_example
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = dev.hebei.pagFlutterExample
+PRODUCT_BUNDLE_IDENTIFIER = dev.zeekr.pagFlutterExample
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2025 dev.hebei. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2026 dev.zeekr. All rights reserved.

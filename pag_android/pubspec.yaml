@@ -8,8 +8,8 @@ topics:
   - pag
 
 environment:
-  sdk: ^3.6.0
-  flutter: ">=3.3.0"
+  sdk: ^3.12.0
+  flutter: ">=3.44.0"
 resolution: workspace
 
 dependencies:
@@ -28,6 +28,6 @@ flutter:
     implements: pag_flutter
     platforms:
       android:
-        package: dev.hebei.pag_android
+        package: dev.zeekr.pag_android
         pluginClass: PAGAndroidPlugin
         dartPluginClass: PAGAndroidPlugin
